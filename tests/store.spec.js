@@ -72,5 +72,23 @@ describe('Store creation r/w tests', function() {
     });
   });
 
+  it('should rename /test.txt to /txt.tset', function(done) {
+    store.rename('/test.txt', '/txt.tset', function(err) {
+      expect(err).to.be.null;
+
+      store.read('/txt.tset', function(err, data) {
+        expect(err).to.be.null;
+        expect(data.toString()).to.contain('hello');
+        done();
+      });
+    });
+  });
+
+  it('should handle notexist rename', function(done) {
+    store.rename('/notexist', '/exist', function(err) {
+      expect(err).not.be.null;
+      done();
+    });
+  });
 
 });

@@ -17,13 +17,19 @@ Create new store
 Write something to store
 
 ```js
-  store.write('my key', function(err) { } );
+  store.write('my key', function(err) { });
 ```
 
 Read it back
 
 ```js
   store.read('my key', function(err, buffer) { });
+```
+
+Rename cache key
+
+```js
+  store.rename(src, dst, function(err) { });
 ```
 
 Additioannly

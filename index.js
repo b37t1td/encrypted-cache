@@ -39,6 +39,16 @@ Store.prototype.exists = function(name, callback) {
   });
 };
 
+Store.prototype.rename = function(src, dst, callback) {
+  var srcHash = this.pathHash(src);
+  var dstHash = this.pathHash(dst);
+
+  fs.rename(this.path + '/' + srcHash, this.path + '/' + dstHash, function(err) {
+    if (err) return callback(err);
+    callback(null);
+  });
+};
+
 Store.prototype.read = function(name, callback) {
   var hash = this.pathHash(name);
   var key = this.key;
