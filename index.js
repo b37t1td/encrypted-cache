@@ -31,13 +31,9 @@ Store.prototype.pathHash = function(path) {
 };
 
 Store.prototype.remove = function(name, callback) {
-  var self = this;
-  this.exists(name, function(err) {
+  var hash = this.pathHash(name);
+  fs.unlink(this.path + '/' + hash, function(err) {
     if (err) return callback(err);
-
-    var hash = self.pathHash(name);
-    fs.unlinkSync(self.path + '/' + hash);
-
     callback(null);
   });
 };
