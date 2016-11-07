@@ -1,0 +1,26 @@
+{
+  "name": "encrypted-cache",
+  "version": "1.0.0",
+  "description": "Encrypted filesystem store for virtual fs use",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "lint": "eslint .",
+    "mocha": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b37t1td/encrypted-cache.git"
+  },
+  "author": "Svetlana Linuxenko <linuxenko@yahoo.com> (http://www.linuxenko.pro)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/b37t1td/encrypted-cache/issues"
+  },
+  "homepage": "https://github.com/b37t1td/encrypted-cache#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.9.1",
+    "mocha": "^3.1.2"
+  }
+}
