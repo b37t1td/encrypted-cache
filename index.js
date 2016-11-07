@@ -30,6 +30,18 @@ Store.prototype.pathHash = function(path) {
         .digest('hex');
 };
 
+Store.prototype.remove = function(name, callback) {
+  var self = this;
+  this.exists(name, function(err) {
+    if (err) return callback(err);
+
+    var hash = self.pathHash(name);
+    fs.unlinkSync(self.path + '/' + hash);
+
+    callback(null);
+  });
+};
+
 Store.prototype.exists = function(name, callback) {
   var hash = this.pathHash(name);
 

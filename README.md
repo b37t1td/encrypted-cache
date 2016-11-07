@@ -32,6 +32,12 @@ Rename cache key
   store.rename(src, dst, function(err) { });
 ```
 
+Remove cache entry
+
+```js
+  store.remove('my key', function(err) { });
+```
+
 Additioannly
 
 ```js

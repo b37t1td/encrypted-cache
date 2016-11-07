@@ -91,4 +91,15 @@ describe('Store creation r/w tests', function() {
     });
   });
 
+  it('should remove /txt.tset', function(done) {
+    store.remove('/txt.tset', function(err) {
+      expect(err).to.be.null;
+
+      store.read('/txt.tset', function(err) {
+        expect(err).not.be.null;
+        done();
+      });
+    });
+  });
+
 });
