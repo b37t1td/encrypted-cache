@@ -1,5 +1,7 @@
 ### Encrypted Cache 
 
+[![Build Status](https://travis-ci.org/b37t1td/encrypted-cache.svg?branch=master)](https://travis-ci.org/b37t1td/encrypted-cache)
+
 An enctypted filesystem cache.
 
 ### API
