@@ -17,7 +17,7 @@ Create new store
 Write something to store
 
 ```js
-  store.write('my key', function(err) { });
+  store.write('my key', buffer, function(err) { });
 ```
 
 Read it back
