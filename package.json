@@ -1,13 +1,19 @@
 {
   "name": "encrypted-cache",
   "version": "1.0.0",
-  "description": "Encrypted filesystem store for virtual fs use",
+  "description": "Encrypted filesystem key-value store.",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "lint": "eslint .",
     "mocha": "mocha tests"
   },
+  "keywords" : [
+    "cache",
+    "key-value store",
+    "store",
+    "fs cache"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/b37t1td/encrypted-cache.git"

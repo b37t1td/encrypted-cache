@@ -4,6 +4,12 @@
 
 An enctypted filesystem cache.
 
+### Install
+
+```js
+  npm install encrypted-cache
+```
+
 ### API
 
 Api is based on convenient `callbacks`.
@@ -38,7 +44,7 @@ Remove cache entry
   store.remove('my key', function(err) { });
 ```
 
-Additioannly
+Additionnaly
 
 ```js
   store.clean();
