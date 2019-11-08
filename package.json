@@ -1,6 +1,6 @@
 {
   "name": "encrypted-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encrypted filesystem key-value store.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "mocha": "mocha tests"
   },
-  "keywords" : [
+  "keywords": [
     "cache",
     "key-value store",
     "store",
@@ -27,6 +27,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.9.1",
-    "mocha": "^3.1.2"
+    "mocha": "^6.2.2"
   }
 }
