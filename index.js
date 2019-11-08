@@ -14,7 +14,6 @@ var Store = function(path) {
   }
 };
 
-
 Store.prototype.clean = function() {
   var files = fs.readdirSync(this.path);
   var path = this.path;
@@ -25,9 +24,7 @@ Store.prototype.clean = function() {
 };
 
 Store.prototype.pathHash = function(path) {
-  return crypto.createHmac('sha256', this.key)
-        .update(path)
-        .digest('hex');
+  return crypto.createHmac('sha256', this.key).update(path).digest('hex');
 };
 
 Store.prototype.remove = function(name, callback) {
